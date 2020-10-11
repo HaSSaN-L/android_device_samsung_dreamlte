@@ -14,4 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_dreamlte.mk
+    $(LOCAL_DIR)/zenx_dreamlte.mk
+
+COMMON_LUNCH_CHOICES := \
+    zenx_dreamlte-user \
+    zenx_dreamlte-userdebug

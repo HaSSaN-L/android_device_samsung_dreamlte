@@ -22,12 +22,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/dreamlte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ZenX-OS stuff.
+$(call inherit-product, vendor/zenx/config/common_full_phone.mk)
+
+# Gapps
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
+
+# BootAnimation
+TARGET_BOOT_ANIMATION_RES := 1440
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dreamlte
-PRODUCT_NAME := lineage_dreamlte
+PRODUCT_NAME := zenx_dreamlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G950F
 PRODUCT_MANUFACTURER := samsung
@@ -37,6 +44,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=dreamltexx \
-    PRIVATE_BUILD_DESC="dreamltexx-user 8.0.0 R16NW G950FXXU1CRC7 release-keys"
+    PRIVATE_BUILD_DESC="coral-user 11 RP1A.201005.004 6782484 release-keys"
 
-BUILD_FINGERPRINT := samsung/dreamltexx/dreamlte:8.0.0/R16NW/G950FXXU1CRC7:user/release-keys
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys"
